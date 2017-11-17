@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "To Do";
+}
+
+@using (Ajax.BeginForm("Create", new AjaxOptions { HttpMethod = "POST" }))
+{
+    <ul id="list">
+        <li id="input">
+            <input type="text" id="addItem" name="Text" />
+            <input type="submit" id="add" value="+" />
+        </li>
+    </ul>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryajax");
+    <script src="~/Scripts/todo.js"></script>
+}

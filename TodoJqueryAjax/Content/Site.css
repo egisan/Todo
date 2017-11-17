@@ -1,0 +1,71 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+ul#list {
+    max-width: 300px;
+    margin-top: 1em;
+    padding-left: 0;
+    position: relative;
+}
+
+ul#list li:nth-child(odd) {
+    background: #fcc;
+}
+
+ul#list li {
+    border: 1px solid white;
+    list-style: none;
+    padding-left: 2em;
+}
+
+ul#list li.checked {
+    text-decoration: line-through;
+    background: #ccc;
+}
+
+ul#list li.checked:before {
+    position: absolute;
+    content: '\2714';
+    left: .5em;
+}
+
+input#addItem {
+    margin: 0em;
+    line-height: 1em;
+}
+
+ul#list button {
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+}
+
+ul#list li button.remove {
+    display: none;
+}
+
+ul#list li.checked button.remove {
+    display: inline;
+}
